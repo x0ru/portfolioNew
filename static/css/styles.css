@@ -1,0 +1,73 @@
+
+
+
+#border{
+    border-right: 2px solid black;
+    min-height: 200vh;
+    margin-top: 100px;
+    margin-right: 100px;
+}
+
+
+
+#menu{
+    position: fixed;
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 100px;
+    right: 35px;
+    top: 0;
+    overflow: hidden;
+}
+
+#inMenu{
+    position: fixed;
+    display: flex;
+    height: 100px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -9px;
+    font-weight: 500;
+    font-size: 18px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: green;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 50px;
+    margin-top: 115px;
+    transform: ;
+}
+
+
+.pie-4 > div{
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    &:nth-child(1) {
+        background: white;
+    }
+    &:nth-child(2) {
+        background: black;
+    }
+    &:nth-child(3) {
+        background: black;
+    }
+     &:nth-child(4) {
+        background: white;
+    }
+}
+
+@keyframes rollMe {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
