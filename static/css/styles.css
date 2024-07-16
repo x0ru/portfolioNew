@@ -1,4 +1,6 @@
-
+.container{
+    padding-right: 150px;
+}
 
 
 #border{
@@ -29,18 +31,64 @@
     height: 100px;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    letter-spacing: -9px;
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 19px;
     width: 100px;
     border-radius: 50%;
-    background-color: green;
+    background-color: white;
     justify-content: center;
     align-items: center;
     top: 0;
     right: 50px;
     margin-top: 115px;
-    transform: ;
+}
+
+#menuText{
+    letter-spacing: -13px;
+}
+
+#menuText:hover{
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -15px;
+    color: #0a53be;
+}
+
+
+
+#firstPartName{
+    display: inline-block;
+    border-bottom: 4px black solid;
+    padding: 8vw 0vw 3vw 6vw;
+}
+
+#dividerLine{
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    display: inline;
+    border-left: 4px black solid;
+}
+
+#secondPartName{
+    display: inline;
+    border-top: 4px black solid;
+    padding: 3vw 4vw 6vw 2vw;
+}
+
+#bartlomiej{
+    margin-left: 5vw;
+}
+
+#bart{
+    border-bottom: red dashed 2px;
+}
+
+#sokol{
+    display: inline;
+    padding-left: 15vw;
+    border-bottom: 4px solid black;
+    padding-right: 2vw;
+    padding-bottom: 1vw;
 }
 
 
@@ -68,6 +116,14 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+
+}
+
+@keyframes biggerTextMenu {
+    100% {
+        font-size: 22px;
+        font-weight: 700;
     }
 
 }
