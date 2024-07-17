@@ -1,11 +1,18 @@
+
 .container{
-    padding-right: 150px;
+    min-height: 100vh;
+    margin-left: 6vw;
+    margin-right: 0;
+    padding-right: 150px
+;
 }
 
+.colorRed{
+    color: red;
+}
 
 #border{
     border-right: 2px solid black;
-    min-height: 200vh;
     margin-top: 100px;
     margin-right: 100px;
 }
@@ -58,39 +65,83 @@
 
 #firstPartName{
     display: inline-block;
-    border-bottom: 4px black solid;
-    padding: 8vw 0vw 3vw 6vw;
+    border-bottom: 3px black solid;
+    padding: 8vw 0 3vw 6vw;
+    animation: transferLinesLeft 2.5s ease-out;
 }
 
 #dividerLine{
     padding-top: 20vh;
     padding-bottom: 20vh;
-    display: inline;
-    border-left: 4px black solid;
+    display: inline-block;
+    border-right:  #dc3545 3px solid;
+    animation: transferLinesTop 1.5s ease-out;
+
+
 }
 
 #secondPartName{
-    display: inline;
-    border-top: 4px black solid;
-    padding: 3vw 4vw 6vw 2vw;
+    display: inline-block;
+    border-top: 3px black solid;
+    padding: 2vw 0 0 4vh;
+    min-width: 32vw;
+    max-width: 32vw;
+    animation: transferLinesRight 2.5s ease-out;
 }
+
 
 #bartlomiej{
     margin-left: 5vw;
 }
 
 #bart{
-    border-bottom: red dashed 2px;
+    border-bottom: #dc3545 dashed 2px;
 }
 
 #sokol{
-    display: inline;
+    display: inline-block;
     padding-left: 15vw;
-    border-bottom: 4px solid black;
-    padding-right: 2vw;
+    border-bottom: 3px solid black;
+    padding-right: 3vw;
     padding-bottom: 1vw;
 }
 
+
+
+.aboutMe{
+    display: inline;
+    border-bottom: 2px solid #dc3545;
+    padding-right: 1vw;
+    text-shadow: -2px 2px 2px gray;
+}
+
+#aboutMeSmallText{
+    border-left: 2px solid #dc3545;
+}
+
+#aboutMeSmallTextRight{
+
+    border-right: 2px solid #dc3545;
+}
+
+.autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(65% 5%);
+}
+
+.autoShowStack{
+    animation: autoShowAnimationStack both;
+    animation-timeline: view(-40% 30%);
+}
+
+.autoShowStackRight{
+    animation: autoShowAnimationStackRight both;
+    animation-timeline: view(-80% 30%);
+}
+
+.otherAnimation{
+    animation: transferLinesRightText 3s ease-out infinite;
+}
 
 .pie-4 > div{
     display: inline-block;
@@ -110,6 +161,48 @@
     }
 }
 
+@keyframes autoShowAnimationStack {
+    0%{
+
+        transform: translateY(0) translateX(80%);
+    }
+    30%{
+        transform: translateX(0);
+    }
+    85% { opacity: 1;
+
+    }
+    100%{
+          transform: translateY(55vh);
+        opacity: 0;
+      }
+}
+
+@keyframes autoShowAnimationStackRight {
+    0%{
+        transform: translateY(0) translateX(-75%);
+    }
+    30%{
+        transform: translateX(0);
+    }
+    85% { opacity: 1;
+    }
+    100%{
+        transform: translateY(95vh);
+        opacity: 0;
+    }
+}
+
+@keyframes autoShowAnimation {
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    } to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+          }
+}
+
 @keyframes rollMe {
     0% {
         transform: rotate(0deg);
@@ -126,4 +219,58 @@
         font-weight: 700;
     }
 
+}
+
+@keyframes transferLinesLeft {
+    0%{
+        transform: translate(-100vw);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes transferLinesRight {
+    0%{
+        transform: translate(100vw);
+        );
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes transferLinesTop{
+    0%{
+        transform: rotateZ(90deg) scale(3);
+    }
+    75%{
+        transform: rotateZ(90deg) scale(1);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}
+@keyframes transferLinesRightText {
+    0%{
+        transform: translateY(-4vh);
+        opacity: 0;
+    }
+    50%{
+        opacity: 80%;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+@media (max-width: 996px) {
+    .autoShowStack, .autoShowStackRight{
+     animation: none;
+    }
 }
