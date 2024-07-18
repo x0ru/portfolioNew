@@ -127,10 +127,10 @@
 .carousel-caption{
     height: 20vh;
     position: absolute;
-    left: 10%;
-    bottom: 11%;
-    width: 60%;
-    color: black;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
     background-color: transparent;
     backdrop-filter: blur(20px);
     background-image: linear-gradient(
@@ -138,30 +138,34 @@
         #ffffff30,
         #00000020
     );
-    border-radius: 30px;
     box-shadow:5px 5px 5px #00000030;
 
 }
 #projects{
-    border: 2px solid red;
+    border: 2px solid #dc3545;
+}
+
+.extraMargin{
+    margin-top: 200px;
 }
 
 .carousel-indicators [data-bs-target]{
-    opacity: 0.7;
-    border: 0;
+    opacity: 0.5;
+    margin-right: 30px;
 }
 
 .carousel-indicators .active{
     opacity: 1;
-    border-left: 1px solid red;
+    border: 2px solid #dc3545;
 }
 
+
+
 .carousel-indicators img{
-    height: 25vh;
+    height: 13vh;
     width: 18vw;
-    max-width: 200px;
+    max-width: 150px;
     display: block;
-    border-bottom: 1px solid red;
 }
 
 .carousel-indicators button{
@@ -176,7 +180,8 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    margin-bottom: 0;
+    justify-content: start;
+    margin-bottom: 26vh;
     margin-right: 0;
     margin-left: 0;
 }
@@ -198,7 +203,7 @@
 }
 
 .carousel-item3{
-    background-image: url("https://picsum.photos/id/193/3000");
+    background-image: url("/static/assets/img/screen_openai.png");
     height: 75vh;
     background-size: cover;
     animation: pan-image 15s linear infinite;
