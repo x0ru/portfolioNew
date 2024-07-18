@@ -124,6 +124,204 @@
     border-right: 2px solid #dc3545;
 }
 
+.carousel-caption{
+    height: 20vh;
+    position: absolute;
+    left: 10%;
+    bottom: 11%;
+    width: 60%;
+    color: black;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    background-image: linear-gradient(
+        120deg,
+        #ffffff30,
+        #00000020
+    );
+    border-radius: 30px;
+    box-shadow:5px 5px 5px #00000030;
+
+}
+#projects{
+    border: 2px solid red;
+}
+
+.carousel-indicators [data-bs-target]{
+    opacity: 0.7;
+    border: 0;
+}
+
+.carousel-indicators .active{
+    opacity: 1;
+    border-left: 1px solid red;
+}
+
+.carousel-indicators img{
+    height: 25vh;
+    width: 18vw;
+    max-width: 200px;
+    display: block;
+    border-bottom: 1px solid red;
+}
+
+.carousel-indicators button{
+    width: max-content!important;
+    height: max-content!important;
+}
+
+
+
+
+.carousel-indicators{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.carousel-item1{
+    background-image: url("/static/assets/img/screen-algo.png");
+    height: 75vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: pan-image 15s linear infinite;
+}
+
+.carousel-item2{
+    background-image: url("/static/assets/img/screen-estate.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 75vh;
+     animation: pan-image 15s linear infinite;
+}
+
+.carousel-item3{
+    background-image: url("https://picsum.photos/id/193/3000");
+    height: 75vh;
+    background-size: cover;
+    animation: pan-image 15s linear infinite;
+}
+
+
+@keyframes pan-image {
+  0% {
+      background-position: 30% 90%;
+      background-size: 200%;
+
+  }
+
+  20% {
+      background-position: 49% 81%;
+      background-size: 200%;
+
+  }
+
+  20.0001% { /* -- View 2 -- */
+
+      background-position: 80% 42%;
+      background-size: 200%;
+
+  }
+
+  40% {
+
+      background-position: 84% 33%;
+      background-size: 200%;
+
+  }
+
+  40.0001% { /* -- View 3 -- */
+      background-position: 0% 0%;
+      background-size: 200%;
+
+  }
+
+  60% {
+    background-position: 25% 25%;
+    background-size: 200%;
+  }
+
+  60.0001% { /* -- View 4 -- */
+      background-position: 10% 4%;
+      background-size: 250%;
+  }
+
+  80% {
+    background-position: 10% 50%;
+    background-size: 250%;
+  }
+
+  80.0001% { /* -- View 5 -- */
+    background-position: 80% 10%;
+    background-size: 300%;
+  }
+
+  100% {
+    background-position: 72% 14%;
+    background-size: 300%;
+  }
+}
+
+@keyframes pan-image-small {
+    0% {
+        background-position: 30% 90%;
+        background-size: 600%;
+
+    }
+
+    20% {
+        background-position: 49% 81%;
+        background-size: 600%;
+
+    }
+
+    20.0001% { /* -- View 2 -- */
+
+        background-position: 40% 42%;
+        background-size: 600%;
+
+    }
+
+    40% {
+
+        background-position: 64% 33%;
+        background-size: 600%;
+
+    }
+
+    40.0001% { /* -- View 3 -- */
+        background-position: 0% 0%;
+        background-size: 600%;
+
+    }
+
+    60% {
+        background-position: 25% 25%;
+        background-size: 600%;
+    }
+
+    60.0001% { /* -- View 4 -- */
+        background-position: 10% 4%;
+        background-size: 650%;
+    }
+
+    80% {
+        background-position: 10% 50%;
+        background-size: 650%;
+    }
+
+    80.0001% { /* -- View 5 -- */
+        background-position: 80% 10%;
+        background-size: 300%;
+    }
+
+    100% {
+        background-position: 72% 14%;
+        background-size: 300%;
+    }
+}
 .autoShow{
     animation: autoShowAnimation both;
     animation-timeline: view(65% 5%);
@@ -142,6 +340,12 @@
 .otherAnimation{
     animation: transferLinesRightText 3s ease-out infinite;
 }
+
+.autoBlur{
+    animation: autoBlurAnimation both;
+    animation-timeline: view();
+}
+
 
 .pie-4 > div{
     display: inline-block;
@@ -210,7 +414,6 @@
     100% {
         transform: rotate(360deg);
     }
-
 }
 
 @keyframes biggerTextMenu {
@@ -218,40 +421,42 @@
         font-size: 22px;
         font-weight: 700;
     }
-
 }
 
 @keyframes transferLinesLeft {
     0%{
-        transform: translate(-100vw);
+        transform: translate(-100vw) scale(0.7);
         opacity: 0;
     }
     100%{
-        transform: translate(0);
+        transform: translate(0) scale(1);
         opacity: 100%;
     }
 }
 
 @keyframes transferLinesRight {
     0%{
-        transform: translate(100vw);
+        transform: translate(100vw) scale(0.7);
         );
         opacity: 0;
     }
     100%{
-        transform: translate(0);
+        transform: translate(0) scale(1);
         opacity: 100%;
     }
 }
 
 @keyframes transferLinesTop{
     0%{
-        transform: rotateZ(90deg) scale(3);
+        transform: rotateZ(90deg) scale(0, 4);
+        border-right: 3px solid red;
     }
     75%{
         transform: rotateZ(90deg) scale(1);
+        border-right: 3px solid #dc3545;
     }
     100%{
+
         transform: rotateZ(0);
     }
 }
@@ -269,8 +474,23 @@
     }
 }
 
+@keyframes autoBlurAnimation {
+    0% {
+        filter: blur(4px);
+    }
+    20% , 80% {
+        filter: blur(0);
+    }
+    100% {
+        filter: blur(4px);
+    }
+}
+
 @media (max-width: 996px) {
     .autoShowStack, .autoShowStackRight{
      animation: none;
+    }
+    .carousel-item1, .carousel-item2, .carousel-item3 {
+        animation: pan-image-small infinite linear 15s;
     }
 }
