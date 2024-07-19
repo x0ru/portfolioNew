@@ -11,13 +11,32 @@
     color: red;
 }
 
+.btn {
+    transform: skew(-10deg);
+}
+
 #border{
     border-right: 2px solid black;
-    margin-top: 100px;
     margin-right: 100px;
 }
 
+#giveMe100{
+    padding-bottom: 100px;
+}
 
+#footer {
+    border-top: 2px black solid;
+
+}
+
+#insideFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-right: 2px solid black;
+    margin-right: 100px;
+}
 
 #menu{
     position: fixed;
@@ -144,6 +163,10 @@
 #projects{
     border: 2px solid #dc3545;
 }
+.smallLogos{
+    width: 3vw;
+    max-width: 50px;
+}
 
 .extraMargin{
     margin-top: 200px;
@@ -159,8 +182,6 @@
     border: 2px solid #dc3545;
 }
 
-
-
 .carousel-indicators img{
     height: 13vh;
     width: 18vw;
@@ -173,9 +194,6 @@
     height: max-content!important;
 }
 
-
-
-
 .carousel-indicators{
     display: flex;
     flex-direction: column;
@@ -187,7 +205,7 @@
 }
 
 .carousel-item1{
-    background-image: url("/static/assets/img/screen-algo.png");
+    background-image: url("/static/assets/img/screen_openai.png");
     height: 75vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -203,7 +221,7 @@
 }
 
 .carousel-item3{
-    background-image: url("/static/assets/img/screen_openai.png");
+    background-image: url("/static/assets/img/screen-algo.png");
     height: 75vh;
     background-size: cover;
     animation: pan-image 15s linear infinite;
