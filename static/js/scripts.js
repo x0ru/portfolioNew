@@ -8,8 +8,8 @@ window.addEventListener('scroll', () => {
   scrollProgress.style.transform = `rotate(${(scrollTop / height) * 500}deg)`;
 });
 
-let text = ['Every cat met cuddler', 'Full stack web developer', 'Calisthenics enthusiast',
-  'Full stack web developer', 'Variety music enjoyer', 'Full stack web developer']
+let text = [ 'Full stack web developer', 'Calisthenics enthusiast',
+  'Full stack web developer', 'Every cat met cuddler', 'Full stack web developer', 'Video games lover']
 let locationString = 0;
 
 function changeTextHero() {
@@ -43,13 +43,13 @@ const menuOption = document.getElementById('menuOption');
 inMenu.addEventListener('click', openMenu);
 
 function openMenu() {
-  if (inMenu.style.scale === '0.9'){
+  if (inMenu.style.scale === '0.95'){
     menuOption.style.display='none';
     inMenu.style.scale='1';
     menuText.style.scale='1'
   } else {
     menuOption.style.display='inline-block'
-    inMenu.style.scale='0.9'
+    inMenu.style.scale='0.95'
     menuText.style.scale='1.3'
   }
 }

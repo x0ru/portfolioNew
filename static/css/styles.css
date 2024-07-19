@@ -1,5 +1,13 @@
+:root{
+    --main-bg-color:#fbfef9;
+    --main-color: #0e79b2;
+    --second-color: #191923;
+}
+
 body{
     font-family: "Cabin", sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--second-color);
 }
 
 h1{
@@ -34,11 +42,11 @@ a:active {
 }
 
 .colorRed{
-   color: #dc3545;
+   color: var(--main-color);
 }
 
 #border{
-    border-right: 2px solid black;
+    border-right: 2px solid var(--second-color);
     margin-right: 100px;
 }
 
@@ -47,7 +55,7 @@ a:active {
 }
 
 #footer {
-    border-top: 2px black solid;
+    border-top: 2px var(--second-color) solid;
 }
 
 #insideFooter{
@@ -55,7 +63,7 @@ a:active {
     justify-content: center;
     align-items: center;
     height: 100px;
-    border-right: 2px solid black;
+    border-right: 2px solid var(--second-color);
     margin-right: 100px;
 }
 
@@ -76,7 +84,7 @@ a:active {
 }
 
 .word {
-    color: black;
+    color: var(--second-color);
     font-family: "Space Grotesk", sans-serif;
     font-size: 2.5rem;
     margin: 0;
@@ -91,14 +99,14 @@ a:active {
 .wordBiggerFont{
     font-size: 3.5rem;
     font-weight: 500;
-    color: #dc3545;
+    color: var(--main-color);
 }
 
 #dividerLine{
     padding-top: 20vh;
     padding-bottom: 20vh;
     display: inline-block;
-    border-right:  #dc3545 3px solid;
+    border-right:  var(--main-color) 3px solid;
     animation: transferLinesTop 1.5s ease-out;
 }
 
@@ -108,7 +116,7 @@ a:active {
 }
 
 #secondPartHero{
-    border-top: 3px solid black;
+    border-top: 3px solid var(--second-color);
     margin-top: 10vh;
     animation: transferLinesRight 2.5s ease-out;
 }
@@ -124,7 +132,7 @@ a:active {
     height: 130px;
     width: 130px;
     border-radius: 50%;
-    background-color: white;
+    background-color: var(--main-bg-color);
     margin-top: 100px;
     right: 35px;
     top: 0;
@@ -141,7 +149,7 @@ a:active {
     font-size: 19px;
     width: 125px;
     border-radius: 50%;
-    background-color: white;
+    background-color: var(--main-bg-color);
     justify-content: center;
     align-items: center;
     top: 0;
@@ -152,6 +160,7 @@ a:active {
 
 #menuText{
     letter-spacing: -8px;
+    user-select: none;
 }
 
 #menuText:hover{
@@ -173,23 +182,23 @@ a:active {
 }
 
 #menuOptionPara{
-    background-color: white;
+    background-color: var(--main-bg-color);
 }
 
 .aboutMe{
     display: inline;
-    border-bottom: 2px solid #dc3545;
+    border-bottom: 2px solid var(--main-color);
     padding-right: 1vw;
     text-shadow: -2px 2px 2px gray;
 }
 
 #aboutMeSmallText{
-    border-left: 2px solid #dc3545;
+    border-left: 2px solid var(--main-color);
 }
 
 #aboutMeSmallTextRight{
 
-    border-right: 2px solid #dc3545;
+    border-right: 2px solid var(--main-color);
 }
 
 .carousel-caption{
@@ -209,9 +218,11 @@ a:active {
     box-shadow:5px 5px 5px #00000030;
 
 }
+
 #projects{
-    border: 2px solid #dc3545;
+    border: 2px solid var(--main-color);
 }
+
 .smallLogos{
     width: 3vw;
     max-width: 50px;
@@ -228,7 +239,7 @@ a:active {
 
 .carousel-indicators .active{
     opacity: 1;
-    border: 2px solid #dc3545;
+    border: 2px solid var(--main-color);
 }
 
 .carousel-indicators img{
@@ -305,7 +316,7 @@ a:active {
   }
 
   40.0001% { /* -- View 3 -- */
-      background-position: 0% 0%;
+      background-position: 0 0;
       background-size: 200%;
 
   }
@@ -364,7 +375,7 @@ a:active {
     }
 
     40.0001% { /* -- View 3 -- */
-        background-position: 0% 0%;
+        background-position: 0 0;
         background-size: 600%;
 
     }
@@ -424,16 +435,16 @@ a:active {
     width: 65px;
     height: 65px;
     &:nth-child(1) {
-        background: white;
+        background: var(--main-bg-color);
     }
     &:nth-child(2) {
-        background: black;
+        background: var(--second-color);
     }
     &:nth-child(3) {
-        background: black;
+        background: var(--second-color);
     }
      &:nth-child(4) {
-        background: white;
+        background: var(--main-bg-color);
     }
 }
 
@@ -521,11 +532,11 @@ a:active {
 @keyframes transferLinesTop{
     0%{
         transform: rotateZ(90deg) scale(0, 4);
-        border-right: 3px solid red;
+        border-right: 3px solid var(--main-color);
     }
     75%{
         transform: rotateZ(90deg) scale(1);
-        border-right: 3px solid #dc3545;
+        border-right: 3px solid var(--main-color);
     }
     100%{
 
@@ -626,7 +637,7 @@ a:active {
     .wordBiggerFont{
         font-size: 3.2rem;
         font-weight: 500;
-        color: #dc3545;
+        color: var(--main-color);
     }
     #secondPartHero{
         min-width: 300px;
@@ -655,7 +666,7 @@ a:active {
     .wordBiggerFont{
         font-size: 2.3rem;
         font-weight: 500;
-        color: #dc3545;
+        color: var(--main-color);
     }
     #secondPartHero{
         min-width: 200px;
